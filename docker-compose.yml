@@ -1,0 +1,16 @@
+services:
+
+  db:
+    container_name: nest-test
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: nest-test
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    ports:
+      - 8000:8080
